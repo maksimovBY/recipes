@@ -32,7 +32,7 @@ public class WebSecurityConfigurerImpl extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/api/recipe/search").authenticated()
                 .mvcMatchers("/api/recipe/*").authenticated()
                 .mvcMatchers("/api/register").permitAll()
-                .mvcMatchers("/h2/**").permitAll()
+                .antMatchers("/h2/**").permitAll()
                 .mvcMatchers("/actuator/shutdown").permitAll()
                 .mvcMatchers("/**").authenticated()
                 .and()

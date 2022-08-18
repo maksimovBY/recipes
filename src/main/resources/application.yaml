@@ -1,0 +1,23 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: 'true'
+spring:
+  h2:
+    console:
+      enabled: 'true'
+      username: sa
+      path: /h2
+  datasource:
+    username: sa
+    url: jdbc:h2:file:~/recipes_db_2
+    password: ''
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: '8080'
